@@ -1,0 +1,15 @@
+.not-found-container {
+  p {
+    margin: 1rem 0;
+  }
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--primary-text-color);
+      text-decoration: none;
+    }
+  }
+}

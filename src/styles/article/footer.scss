@@ -1,0 +1,100 @@
+.article-header-line {
+  margin: 1rem 0;
+}
+
+.article-share-buttons {
+  button:not(:last-child) {
+    margin-right: 0.25rem;
+  }
+}
+
+.article-navigation {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 559px) {
+    flex-direction: column;
+  }
+}
+
+.article-navigation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.25rem;
+  height: 7rem;
+
+  @media screen and (max-width: 559px) {
+    margin: 0.5rem 0;
+  }
+
+  @media screen and (min-width: 560px) {
+    width: 100%;
+    transition: opacity 0.2s;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:first-child {
+      margin: 1rem 1rem 1rem 0;
+    }
+    &:last-child {
+      margin: 1rem 0 1rem 1rem;
+    }
+  }
+}
+
+.article-navigation-item-older,
+.article-navigation-item-newer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 100%;
+}
+
+.article-navigation-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.article-navigation-item-header {
+  color: var(--text-secondary-color);
+  font-size: 80%;
+}
+
+.article-navigation-item.article-navigation-item-none {
+  border: 4px solid var(--quote-bg-color);
+  background-color: var(--bg-color);
+  color: var(--text-secondary-color);
+
+  .article-navigation-item-older,
+  .article-navigation-item-newer,
+  .article-navigation-item-content {
+    background-color: var(--quote-bg-color);
+  }
+}
+
+.article-navigation-item.article-navigation-item-link {
+  border: 4px solid var(--primary-color);
+  background-color: var(--bg-color);
+  color: var(--text-secondary-color);
+
+  .article-navigation-item-older,
+  .article-navigation-item-newer {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+  }
+  .article-navigation-item-content {
+    background-color: var(--bg-color);
+    color: var(--link-color);
+  }
+}

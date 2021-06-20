@@ -1,0 +1,27 @@
+{
+  "include": [
+    "./src/**/*",
+    "./gatsby-*.ts"
+  ],
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "graphql-types": [
+        "types/graphql-types",
+        "types/graphql-types-stub"
+      ]
+    }
+  }
+}

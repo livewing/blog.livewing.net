@@ -1,0 +1,157 @@
+.article-body {
+  color: var(--text-color);
+
+  h1 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--quote-bg-color);
+    border-left: 1rem solid var(--primary-color);
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    padding: 0;
+    border-bottom: 2px solid var(--quote-bg-color);
+  }
+
+  h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  a[href] {
+    color: var(--link-color);
+    text-decoration: underline;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--primary-text-color);
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  ul.contains-task-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  :not(pre) > code {
+    background-color: var(--quote-bg-color);
+    padding: 0 0.2rem;
+    border: 1px solid var(--text-secondary-color);
+    border-radius: 0.2rem;
+  }
+
+  pre,
+  .lilypond-generated {
+    overflow-x: auto;
+    overflow-wrap: unset;
+  }
+
+  .article-code-title {
+    display: inline-block;
+    margin-bottom: -1rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    background: var(--quote-bg-color);
+    font-size: 0.75rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+
+    & + div > pre {
+      margin-top: 0;
+    }
+  }
+
+  blockquote {
+    background-color: var(--quote-bg-color);
+    margin: 1rem;
+    padding: 1rem;
+    font-style: italic;
+
+    & blockquote {
+      background-color: var(--nested--quote-bg-color);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    cite {
+      display: block;
+      color: var(--text-secondary-color);
+      text-align: end;
+
+      &::before {
+        content: "\02014";
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  table {
+    background-color: var(--quote-bg-color);
+    margin: 1rem auto;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--bg-color);
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  tbody td {
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--bg-color);
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  summary {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--quote-bg-color);
+    cursor: pointer;
+  }
+
+  .footnotes p {
+    margin: 0;
+  }
+}

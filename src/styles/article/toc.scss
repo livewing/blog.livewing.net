@@ -1,0 +1,35 @@
+.article-toc {
+  margin: 0.5rem 0;
+  border: 2px solid var(--quote-bg-color);
+  border-radius: 0.25rem;
+
+  summary {
+    padding: 0.5rem;
+    background-color: var(--quote-bg-color);
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 1rem;
+    padding-inline-start: 0;
+
+    li {
+      list-style-type: none;
+      & > ul {
+        margin: 0;
+        padding-inline-start: 2rem;
+      }
+    }
+  }
+
+  a[href] {
+    color: var(--link-color);
+    text-decoration: underline;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--primary-text-color);
+      text-decoration: none;
+    }
+  }
+}

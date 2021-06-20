@@ -1,0 +1,37 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  margin: 1rem auto;
+  height: 2px;
+  background-color: var(--quote-bg-color);
+  border: 1px solid var(--quote-bg-color);
+  border-radius: 1px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
+.inside {
+  width: var(--inside-width);
+  max-width: var(--inside-max-width);
+  margin: 0 auto;
+}
+
+.page-content {
+  padding-top: calc(var(--header-height) + var(--content-margin));
+  padding-bottom: calc(var(--footer-height) + var(--content-margin));
+}

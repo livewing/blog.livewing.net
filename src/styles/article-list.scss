@@ -1,0 +1,31 @@
+.article-list-item {
+  position: relative;
+  padding: 0.5rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--quote-bg-color);
+  }
+
+  .article-list-title {
+    color: var(--link-color);
+  }
+
+  .article-list-date {
+    color: var(--text-secondary-color);
+  }
+
+  & a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.1s;
+  }
+
+  & a:hover::before {
+    background-color: var(--quote-bg-color);
+  }
+}
