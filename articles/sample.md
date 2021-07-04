@@ -153,13 +153,17 @@ normal *em* _em_ **strong** __strong__ ~~del~~
 ```markdown
 <details>
 <summary>クリックして展開</summary>
-<p>こんにちは</p>
+
+こんにちは
+
 </details>
 ```
 
 <details>
 <summary>クリックして展開</summary>
-<p>こんにちは</p>
+
+こんにちは
+
 </details>
 
 # コード (`<code>`)
