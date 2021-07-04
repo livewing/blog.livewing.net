@@ -159,4 +159,31 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  div.info {
+    background: rgba($color: royalblue, $alpha: 0.2);
+    border: 1px solid royalblue;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+
+  div.warning {
+    background: rgba($color: orange, $alpha: 0.2);
+    border: 1px solid orange;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+
+  div.danger {
+    background: rgba($color: crimson, $alpha: 0.2);
+    border: 1px solid crimson;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
 }

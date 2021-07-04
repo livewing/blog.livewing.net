@@ -166,6 +166,46 @@ normal *em* _em_ **strong** __strong__ ~~del~~
 
 </details>
 
+# アラート
+
+```markdown
+<div class="info">
+
+**情報**: info
+
+</div>
+
+<div class="warning">
+
+**警告**: warning
+
+</div>
+
+<div class="danger">
+
+**危険**: danger
+
+</div>
+```
+
+<div class="info">
+
+**情報**: info
+
+</div>
+
+<div class="warning">
+
+**警告**: warning
+
+</div>
+
+<div class="danger">
+
+**危険**: danger
+
+</div>
+
 # コード (`<code>`)
 
 ````markdown
