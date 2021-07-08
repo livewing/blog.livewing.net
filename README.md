@@ -82,11 +82,12 @@ const config: GatsbyConfig = {
 記事のメタデータは Markdown ファイル先頭の YAML Front Matter で設定します。
 
 ```yaml
-title: サンプル記事        # 記事タイトル
-slug: /sample              # 記事の URL のパス部分
-date: 2021-01-01T00:00:00  # 記事の投稿日時
-tags: [Sample, Markdown]   # 記事についたタグ
-tocMaxDepth: 2             # 目次の最大深さ
+title: サンプル記事          # 記事タイトル
+slug: /sample                # 記事の URL のパス部分
+date: 2021-01-01T00:00:00    # 記事の投稿日時
+update: 2021-01-01T00:00:00  # 記事の更新日時
+tags: [Sample, Markdown]     # 記事についたタグ
+tocMaxDepth: 2               # 目次の最大深さ
 ```
 
 ## 楽譜の埋め込みプラグインを無効化する

@@ -38,6 +38,11 @@ const Page: FC<PageProps> = ({ data, pageContext: { slug } }) => {
     typeof data.article?.frontmatter?.date === 'string'
       ? data.article.frontmatter.date
       : void 0;
+  const update =
+    typeof data.article?.frontmatter?.update === 'string' &&
+    data.article.frontmatter.update !== date
+      ? data.article.frontmatter.update
+      : void 0;
   const tags = filterTags(data.article?.frontmatter?.tags);
   const html = data.article?.html || void 0;
   const toc = data.article?.tableOfContents || void 0;
@@ -56,7 +61,12 @@ const Page: FC<PageProps> = ({ data, pageContext: { slug } }) => {
       <main>
         <article>
           <div className="article-header">
-            {date && <p className="article-date">{date} 投稿</p>}
+            {date && (
+              <p className="article-date">
+                <time dateTime={date.replace(/\//g, '-')}>{date}</time> 投稿
+                {update && ` (${update} 更新)`}
+              </p>
+            )}
             {title && <h1 className="article-title">{title}</h1>}
             {tags.length !== 0 && (
               <ul className="article-tags">
@@ -112,6 +122,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY/MM/DD", locale: "ja-JP")
+        update(formatString: "YYYY/MM/DD", locale: "ja-JP")
         tags
       }
       excerpt

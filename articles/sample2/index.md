@@ -2,6 +2,7 @@
 title: サンプル記事 2
 slug: /sample2
 date: 2021-01-02T00:00:00
+update: 2021-01-03T00:00:00
 tags: [Sample, Markdown, KaTeX, LilyPond]
 tocMaxDepth: 2
 ---
