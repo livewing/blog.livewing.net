@@ -144,6 +144,10 @@
     }
   }
 
+  img {
+    filter: drop-shadow(0 0 4px #808080);
+  }
+
   summary {
     padding: 0.5rem;
     border-radius: 0.25rem;
