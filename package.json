@@ -45,7 +45,7 @@
     "gatsby-remark-images": "^5.6.0",
     "gatsby-remark-katex": "^5.6.0",
     "gatsby-remark-prismjs": "^5.6.0",
-    "gatsby-source-filesystem": "^3.9.0",
+    "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-remark": "^4.6.0",
     "katex": "^0.13.11",
     "modern-css-reset": "^1.4.0",
