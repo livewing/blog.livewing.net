@@ -6,10 +6,10 @@
   "homepage": "https://blog.livewing.net/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gssequence/blog.livewing.net"
+    "url": "https://github.com/livewing/blog.livewing.net"
   },
   "bugs": {
-    "url": "https://github.com/gssequence/blog.livewing.net/issues"
+    "url": "https://github.com/livewing/blog.livewing.net/issues"
   },
   "license": "MIT",
   "private": true,

@@ -9,7 +9,7 @@ const config: GatsbyConfig = {
     description: 'Sample blog using Gatsby',
     defaultLanguage: 'ja',
     defaultLocale: 'ja-JP',
-    githubUrl: 'https://github.com/gssequence/blog.livewing.net',
+    githubUrl: 'https://github.com/livewing/blog.livewing.net',
     siteUrl: 'https://blog-livewing-net-demo.netlify.app'
   },
   plugins: [

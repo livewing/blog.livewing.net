@@ -1,7 +1,7 @@
 # blog.livewing.net
 
-[![CI](https://github.com/gssequence/blog.livewing.net/workflows/CI/badge.svg)](https://github.com/gssequence/blog.livewing.net/actions?query=workflow%3ACI)
-[![LICENSE](https://img.shields.io/github/license/gssequence/blog.livewing.net)](./LICENSE)
+[![CI](https://github.com/livewing/blog.livewing.net/workflows/CI/badge.svg)](https://github.com/livewing/blog.livewing.net/actions?query=workflow%3ACI)
+[![LICENSE](https://img.shields.io/github/license/livewing/blog.livewing.net)](./LICENSE)
 
 [blog.livewing.net](https://blog.livewing.net/) のブログです。
 
@@ -24,7 +24,7 @@
 ## クイックスタート
 
 ```shell
-$ npx -p gatsby-cli gatsby new my-blog gssequence/blog.livewing.net
+$ npx -p gatsby-cli gatsby new my-blog livewing/blog.livewing.net
 $ cd my-blog
 ```
 
@@ -69,7 +69,7 @@ const config: GatsbyConfig = {
     // Facebook OGP のロケール (og:locale)
     defaultLocale: 'ja-JP',
     // フッタの GitHub アイコンのリンク
-    githubUrl: 'https://github.com/gssequence/blog.livewing.net',
+    githubUrl: 'https://github.com/livewing/blog.livewing.net',
     // ブログの URL (ドメイン部分まで。末尾のスラッシュは付けないこと)
     siteUrl: 'https://blog-livewing-net-demo.netlify.app'
   },
