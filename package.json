@@ -30,7 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
-    "gatsby": "^3.13.0",
+    "gatsby": "^3.14.1",
     "gatsby-plugin-graphql-codegen": "^3.0.0",
     "gatsby-plugin-no-sourcemaps": "^3.13.0",
     "gatsby-plugin-nprogress": "^3.13.0",
