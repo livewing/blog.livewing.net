@@ -2,7 +2,6 @@ import React from 'react';
 import type { FC } from 'react';
 import { Helmet as ReactHelmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
-// eslint-disable-next-line import/no-unresolved
 import { useLocation } from '@reach/router';
 import { makePageTitle, makeTitle } from '../utils/helmet';
 import type { HelmetComponentQuery } from '../../types/graphql-types';

@@ -6,7 +6,6 @@ import {
   dateRange
 } from './src/utils/archive';
 import { escapeTagName } from './src/utils/tag';
-// eslint-disable-next-line import/no-unresolved
 import type { CreatePagesQuery } from 'graphql-types';
 
 const templateDirectory = resolve(__dirname, 'src', 'templates');
