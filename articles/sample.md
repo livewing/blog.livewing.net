@@ -252,6 +252,14 @@ fn main() {
  console.log(str);
 ```
 
+# キーボード入力 (`<kbd>`)
+
+```markdown
+<kbd>Alt</kbd>+<kbd>F4</kbd> でウィンドウを閉じる。
+```
+
+<kbd>Alt</kbd>+<kbd>F4</kbd> でウィンドウを閉じる。
+
 # 脚注
 
 ```markdown
