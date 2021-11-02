@@ -15,7 +15,7 @@ header {
     width: 100%;
     height: 100%;
     background-color: var(--header-bg-color);
-    backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px); // stylelint-disable-line scss/no-global-function-names -- WTF
   }
 
   & > .inside {
