@@ -33,7 +33,7 @@
     "gatsby": "^4.0.2",
     "gatsby-plugin-graphql-codegen": "^3.0.0",
     "gatsby-plugin-no-sourcemaps": "^4.0.0",
-    "gatsby-plugin-nprogress": "^4.0.0",
+    "gatsby-plugin-nprogress": "^4.3.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-robots-txt": "^1.6.14",
     "gatsby-plugin-sass": "^5.0.0",
