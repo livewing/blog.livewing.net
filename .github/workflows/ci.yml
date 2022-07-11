@@ -1,74 +1,26 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
-  build:
-    name: Build
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-    env:
-      LILYPOND_INSTALLER_VERSION: 2.22.1-1
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - name: Prepare LilyPond installer cache
-        id: lilypond-installer-cache
-        uses: actions/cache@v2
-        with:
-          path: install-lilypond.sh
-          key: ${{ runner.os }}-lilypond-installer-${{ env.LILYPOND_INSTALLER_VERSION }}
-      - name: Download LilyPond installer
-        if: steps.lilypond-installer-cache.outputs.cache-hit != 'true'
-        run: curl -o install-lilypond.sh "https://lilypond.org/download/binaries/linux-64/lilypond-${LILYPOND_INSTALLER_VERSION}.linux-64.sh"
-      - name: Install LilyPond
-        run: sh install-lilypond.sh --batch
-      - name: Add Path
-        run: echo "$HOME/bin" >> $GITHUB_PATH
-      - name: Prepare dependency cache
-        id: dependency-cache
-        uses: actions/cache@v2
+          node-version: 18
+      - name: Prepare cache
+        id: cache
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        if: steps.dependency-cache.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
-      - name: Build
-        run: npm run build
       - name: Lint
         run: npm run lint
-      - name: stylelint
-        run: npm run stylelint
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: public
-          path: public
-  deploy:
-    name: Deploy
-    if: github.event_name == 'push'
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download production artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: public
-          path: public
-      - name: Publish
-        uses: netlify/actions/cli@master
-        with:
-          args: deploy --dir=public --prod
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

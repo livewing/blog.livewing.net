@@ -10,8 +10,8 @@ interface PageProps {
 const Page: NextPage<PageProps> = ({ siteMetadata }) => (
   <Layout siteMetadata={siteMetadata}>
     <main className="flex flex-col items-center gap-2 divide-neutral-500">
-      <h1 className="text-8xl font-extralight">404</h1>
-      <p>Not Found</p>
+      <h1 className="text-8xl font-extralight">500</h1>
+      <p>Internal Server Error</p>
     </main>
   </Layout>
 );

@@ -1,0 +1,151 @@
+.markdown > div {
+  @apply flex flex-col gap-4;
+}
+
+.markdown h1 {
+  @apply font-bold text-3xl bg-neutral-200 dark:bg-neutral-800 mt-2 p-2 border-l-[1rem] border-l-blue-500;
+}
+
+.markdown h2 {
+  @apply font-bold text-3xl pb-1 border-b border-b-neutral-300 dark:border-b-neutral-700;
+}
+
+.markdown h3 {
+  @apply font-bold text-2xl pb-1 border-b border-dashed border-b-neutral-300 dark:border-b-neutral-700;
+}
+
+.markdown h4 {
+  @apply font-bold text-xl;
+}
+
+.markdown h5 {
+  @apply font-bold text-lg;
+}
+
+.markdown h6 {
+  @apply font-bold text-lg;
+}
+
+.markdown hr {
+  @apply border-t border-t-neutral-300 dark:border-t-neutral-700;
+}
+
+.markdown blockquote {
+  @apply flex flex-col gap-4 italic bg-neutral-500/20 p-4;
+}
+
+.markdown :not(pre) > code {
+  @apply bg-neutral-800/10 dark:bg-neutral-200/10 text-[87.5%] p-1 rounded;
+}
+
+.markdown pre {
+  @apply bg-[#272b33] text-neutral-100 text-sm p-4 rounded overflow-x-auto;
+}
+
+.markdown pre[class*="language-"] {
+  @apply my-0;
+}
+
+.markdown .code-title--wrapper {
+  @apply flex flex-col items-start overflow-hidden;
+}
+
+.markdown .code-title--wrapper .code-title--title {
+  @apply text-xs font-mono px-3.5 py-1 rounded-t bg-[#272b33] text-neutral-100;
+}
+
+.markdown .code-title--wrapper .code-title--code {
+  @apply rounded-tl-none self-stretch;
+}
+
+.markdown a[href]:not([class]) {
+  @apply text-blue-600 dark:text-blue-400 underline transition hover:bg-blue-600 hover:text-neutral-100 hover:no-underline hover:rounded-sm;
+}
+
+.markdown table {
+  @apply mx-auto;
+}
+
+.markdown thead th {
+  @apply bg-blue-600 text-neutral-100 border-2 border-neutral-100 dark:border-neutral-900 px-2 py-1;
+}
+
+.markdown tbody td {
+  @apply bg-neutral-200 dark:bg-neutral-800 border-2 border-neutral-100 dark:border-neutral-900 px-2 py-1;
+}
+
+.markdown ul {
+  @apply list-disc pl-8;
+}
+
+.markdown ul ul {
+  @apply list-[circle];
+}
+
+.markdown ul ul ul {
+  @apply list-[square];
+}
+
+.markdown ul[class="contains-task-list"] {
+  @apply list-none pl-4;
+}
+
+.markdown ol {
+  @apply list-decimal pl-8;
+}
+
+.markdown details {
+  @apply border border-neutral-300 dark:border-neutral-700 overflow-hidden rounded-lg;
+}
+
+.markdown details > :not(summary) {
+  @apply m-2;
+}
+
+.markdown details > summary {
+  @apply p-2 bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 cursor-pointer transition-colors;
+}
+
+.markdown details[open] > summary {
+  @apply bg-neutral-300 dark:bg-neutral-700;
+}
+
+.markdown kbd {
+  @apply border border-neutral-700 bg-neutral-800 text-neutral-100 px-1 rounded;
+}
+
+.markdown .info {
+  @apply border border-blue-500 rounded-md bg-blue-500/20 p-2;
+}
+
+.markdown .warning {
+  @apply border border-yellow-500 rounded-md bg-yellow-500/20 p-2;
+}
+
+.markdown .danger {
+  @apply border border-red-500 rounded-md bg-red-500/20 p-2;
+}
+
+.link-card {
+  @apply h-24 sm:h-24 flex gap-1 rounded-lg overflow-hidden border border-neutral-300 bg-neutral-100 hover:bg-neutral-200 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800 transition-colors;
+}
+
+.link-card img {
+  @apply aspect-square sm:aspect-[1200/630] object-cover;
+}
+
+.link-card .link-card--text {
+  @apply p-2 flex flex-col justify-center overflow-hidden;
+}
+
+.link-card .link-card--title {
+  @apply text-lg font-bold truncate;
+}
+
+.link-card .link-card--description {
+  @apply text-sm text-neutral-700 dark:text-neutral-300 truncate;
+}
+
+.link-card .link-card--url {
+  @apply text-sm text-neutral-600 dark:text-neutral-400 truncate;
+}

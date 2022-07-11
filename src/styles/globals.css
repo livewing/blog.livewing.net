@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./markdown.css";
+@import "../../node_modules/prism-themes/themes/prism-one-dark.min.css";
+@import "../../node_modules/katex/dist/katex.min.css";

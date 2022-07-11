@@ -1,37 +1,38 @@
-import React from 'react';
-import type { FC } from 'react';
-import { graphql } from 'gatsby';
-import { Layout } from '../components/layout';
-import { Helmet } from '../components/helmet';
-import { ArticleList } from '../components/article-list';
-import { convertQueryResult } from '../utils/article-list';
-import type { IndexPageQuery } from '../../types/graphql-types';
+import { ArticleList } from '@/components/ArticleList';
+import { Layout } from '@/components/Layout';
+import { REVALIDATE_SECONDS } from '@/lib/constants';
+import { generateExcerpt } from '@/lib/excerpt';
+import { hostname } from '@/lib/url';
+import { getArticles } from '@/services/articles';
+import { getSiteMetadata } from '@/services/site-metadata';
+import type { InferGetStaticPropsType, NextPage } from 'next';
 
-interface PageProps {
-  data: IndexPageQuery;
-}
-
-const Page: FC<PageProps> = ({ data }) => (
-  <Layout>
-    <Helmet />
-    <ArticleList items={convertQueryResult(data.allMarkdownRemark.edges)} />
+type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
+const Page: NextPage<PageProps> = ({ url, siteMetadata, articles }) => (
+  <Layout
+    siteMetadata={siteMetadata}
+    url={url}
+    description={siteMetadata.title}
+  >
+    <main>
+      <ArticleList articles={articles} />
+    </main>
   </Layout>
 );
 export default Page;
 
-export const query = graphql`
-  query IndexPage {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "YYYY/MM/DD", locale: "ja-JP")
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
+export const getStaticProps = async () => {
+  const siteMetadata = await getSiteMetadata();
+  const articles = (await getArticles()).contents.map(
+    ({ id, metadata: { title, published: date }, article }) => ({
+      id,
+      title,
+      date,
+      excerpt: generateExcerpt(article)
+    })
+  );
+  return {
+    props: { url: `${hostname}/`, siteMetadata, articles },
+    revalidate: REVALIDATE_SECONDS
+  };
+};
