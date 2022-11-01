@@ -59,7 +59,7 @@
     "@livewing/eslint-config": "^1.0.4",
     "@tsconfig/strictest": "^1.0.2",
     "@types/node": "^18.8.3",
-    "@types/open-graph-scraper": "^4.8.1",
+    "@types/open-graph-scraper": "^4.8.2",
     "@types/react": "^18.0.21",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.25.0",
