@@ -58,7 +58,7 @@
   "devDependencies": {
     "@livewing/eslint-config": "^1.0.4",
     "@tsconfig/strictest": "^1.0.2",
-    "@types/node": "^18.8.3",
+    "@types/node": "^18.11.10",
     "@types/open-graph-scraper": "^4.8.1",
     "@types/react": "^18.0.21",
     "autoprefixer": "^10.4.12",
